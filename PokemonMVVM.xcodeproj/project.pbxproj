@@ -20,7 +20,7 @@
 		845D74DA22C712D300FD6FDB /* DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D74D922C712D300FD6FDB /* DynamicType.swift */; };
 		845D74DC22C7183400FD6FDB /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D74DB22C7183400FD6FDB /* PlayerViewModel.swift */; };
 		845D74DF22C89F5C00FD6FDB /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D74DE22C89F5C00FD6FDB /* ViewControllerExtensions.swift */; };
-		845D74EA22C9895400FD6FDB /* PokemonNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D74E922C9895400FD6FDB /* PokemonNetworking.swift */; };
+		845D74F222C98E7500FD6FDB /* PokemonNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D74F122C98E7500FD6FDB /* PokemonNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		845D74D922C712D300FD6FDB /* DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
 		845D74DB22C7183400FD6FDB /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		845D74DE22C89F5C00FD6FDB /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
-		845D74E922C9895400FD6FDB /* PokemonNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonNetworking.swift; path = PokemonMVVM/Service/PokemonNetworking.swift; sourceTree = SOURCE_ROOT; };
+		845D74F122C98E7500FD6FDB /* PokemonNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 		845D748F22C583A500FD6FDB /* PokemonMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				845D74E822C9890700FD6FDB /* Service */,
+				845D74F022C98E5400FD6FDB /* Service */,
 				845D74DD22C89F4D00FD6FDB /* Extensions */,
 				845D74D122C6F36D00FD6FDB /* SupportingFiles */,
 				845D74C222C5840300FD6FDB /* Model */,
@@ -184,13 +184,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		845D74E822C9890700FD6FDB /* Service */ = {
+		845D74F022C98E5400FD6FDB /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				845D74E922C9895400FD6FDB /* PokemonNetworking.swift */,
+				845D74F122C98E7500FD6FDB /* PokemonNetworking.swift */,
 			);
-			name = Service;
-			path = "New Group";
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,7 +330,7 @@
 				845D749122C583A500FD6FDB /* AppDelegate.swift in Sources */,
 				845D74D522C7112000FD6FDB /* Player.swift in Sources */,
 				845D74D322C6F37B00FD6FDB /* Constants.swift in Sources */,
-				845D74EA22C9895400FD6FDB /* PokemonNetworking.swift in Sources */,
+				845D74F222C98E7500FD6FDB /* PokemonNetworking.swift in Sources */,
 				845D74DA22C712D300FD6FDB /* DynamicType.swift in Sources */,
 				845D74C622C590AE00FD6FDB /* PokemonViewController.swift in Sources */,
 			);
