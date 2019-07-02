@@ -24,7 +24,6 @@ public struct DynamicType<T> {
       }
    }
    
-   
    mutating func bind(_ listener:@escaping ModelEventListener) {
       listeners.append(listener)
       if let value = value {

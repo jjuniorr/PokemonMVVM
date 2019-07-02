@@ -18,6 +18,10 @@ enum PokemonAlertMessages : String {
    
    case wrongAnswer = "Wrong answer."
    case genericError = "Internal error has occurred."
+   
+   func message() -> String {
+      return self.rawValue
+   }
 }
 
 class PokemonViewModel {
@@ -43,18 +47,18 @@ extension PokemonViewModel {
    
    func verify(guess: String?) -> PokemonVerificationState {
       guard let pokemon = selectedPokemon.value else {
-         return PokemonVerificationState.failure(PokemonAlertMessages.genericError.rawValue)
+         return PokemonVerificationState.failure(PokemonAlertMessages.genericError.message())
       }
       
       let correctPokemonNameMessage = " The answer was \(pokemon.name)"
       guard let userGuess = guess, userGuess.isEmpty != true else {
-         return PokemonVerificationState.failure(PokemonAlertMessages.wrongAnswer.rawValue + correctPokemonNameMessage)
+         return PokemonVerificationState.failure(PokemonAlertMessages.wrongAnswer.message() + correctPokemonNameMessage)
       }
       
       if userGuess.lowercased() == pokemon.name.lowercased() {
-         return PokemonVerificationState.success(PokemonAlertMessages.rightAnswer.rawValue)
+         return PokemonVerificationState.success(PokemonAlertMessages.rightAnswer.message())
       }else {
-         return PokemonVerificationState.failure(PokemonAlertMessages.wrongAnswer.rawValue + correctPokemonNameMessage)
+         return PokemonVerificationState.failure(PokemonAlertMessages.wrongAnswer.message() + correctPokemonNameMessage)
       }
    }
 }

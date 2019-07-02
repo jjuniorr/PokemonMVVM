@@ -45,8 +45,8 @@ class PokemonViewController: UIViewController {
    }
    
    @IBAction func guessThePokemon(_ sender: UIButton) {
-      guard pokemonViewModel != nil else { return }
-      switch pokemonViewModel!.verify(guess: pokemonTextField.text){
+      guard let viewModel = pokemonViewModel else { return }
+      switch viewModel.verify(guess: pokemonTextField.text){
       case .success(let message):
          displayAlertWithTitle("Pokemon Message", message: message)
          playerViewModel.incrementScore()
@@ -55,7 +55,7 @@ class PokemonViewController: UIViewController {
          playerViewModel.decrementScore()
       }
       pokemonTextField.text?.removeAll()
-      pokemonViewModel?.selectNewPokemon()
+      viewModel.selectNewPokemon()
       activityIndicator.startAnimating()
    }
 }
